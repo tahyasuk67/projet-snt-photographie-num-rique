@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>La photographie numérique en bref</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<header>
+        <h1>Traitement d'image</h1>
+    </header>
+	<nav> 
+<a href="index.html"class="button button1" style="text-decoration: none; display: inline-block;">Accueil</a>
+<a href="l'historique des photos numériques.html"class="button button1" style="text-decoration: none; display: inline-block;">l'historique des photos numériques</a> 
+<a href="Les images , Capteur photo .html"class="button button2" style="text-decoration: none; display: inline-block;">Les images , Capteur photo</a>
+<a href="Traitement d'image.html"class="button button3" style="text-decoration: none; display: inline-block;">Traitement d'image</a>
+<a href="Métadonnées EXIF.html"class="button button1" style="text-decoration: none; display: inline-block;">Métadonnées EXIF</a>
+</head>
+<body>
+        <img src="traitement.jpg" 
+             style="float: right; margin-left: 20px; width: 450	px; border: 1px solid #ccc;">
+
+    <p>Une fois que le capteur a capturé la lumière et l'a convertie en données binaires, le processeur de l'appareil (ou un logiciel) doit intervenir pour rendre l'image lisible et esthétique. C'est ce qu'on appelle le traitement d'image.</p>
+
+    <div style="clear: both;"></div> <h2>1. Les étapes du traitement automatique</h2>
+    <p>Dès que vous appuyez sur le bouton, l'appareil photo ou le smartphone effectue instantanément plusieurs opérations complexes :</p>
+    <ol>
+        <li><strong>Le dématriçage :</strong> L'appareil calcule la couleur réelle de chaque pixel en analysant les valeurs des photosites voisins (car chaque photosite ne voit qu'une seule couleur via le filtre de Bayer).</li>
+        <li><strong>La balance des blancs :</strong> Ajustement des couleurs pour que les zones blanches apparaissent vraiment blanches, quelle que soit la source de lumière (soleil, ampoule, etc.).</li>
+        <li><strong>L'ajustement du contraste et de la luminosité :</strong> Amélioration automatique du rendu global de l'image.</li>
+        <li><strong>La compression :</strong> Réduction de la taille du fichier (souvent en format JPEG) pour faciliter le stockage et le partage.</li>
+    </ol>
+
+    <h2>2. Les principaux types de traitement (Retouche)</h2>
+    <p>Après la capture, on peut modifier l'image manuellement à l'aide de logiciels. Voici les traitements les plus courants :</p>
+    <ul>
+        <li><strong>Corrections colorimétriques :</strong> Modification de la saturation, de la teinte ou du virage partiel des couleurs.</li>
+        <li><strong>Filtrage :</strong> Application de filtres pour flouter (réduire le bruit), accentuer la netteté ou créer des effets artistiques.</li>
+        <li><strong>Opérations géométriques :</strong> Recadrage, rotation, redimensionnement ou correction des perspectives.</li>
+        <li><strong>Retouche locale :</strong> Suppression d'éléments indésirables, correction des yeux rouges ou lissage de peau.</li>
+    </ul>
+
+    <h2>3. Les formats de fichiers et le traitement</h2>
+    <p>Le choix du format de fichier influence grandement les possibilités de traitement ultérieur :</p>
+    <ul>
+        <li><strong>Format RAW (Brut) :</strong> Contient toutes les données brutes du capteur. C'est le format idéal pour un traitement post-capture de haute qualité car il offre une très grande latitude de réglage sans perte.</li>
+        <li><strong>Format JPEG :</strong> Format compressé où l'appareil a déjà appliqué ses propres traitements automatiques. Il est plus léger mais offre moins de flexibilité pour la retouche manuelle.</li>
+    </ul>
+
+</body>
+
+    <p>Une image numérique n'est au final qu'une immense suite de 0 et de 1. Pour arriver à ce résultat, l'ordinateur doit traduire chaque couleur en langage binaire.</p>
+
+    <div style="clear: both;"></div>
+
+    <h2>4. Le mécanisme de conversion (Étape par étape)</h2>
+    <p>Voici l'ordre logique pour transformer une couleur réelle en donnée informatique :</p>
+    <ol>
+        <li><strong>Décomposition :</strong> On sépare la lumière de chaque pixel en trois signaux (Rouge, Vert, Bleu).</li>
+        <li><strong>Mesure :</strong> On mesure l'intensité de chaque signal sur une échelle de 0 à 255.</li>
+        <li><strong>Conversion :</strong> On traduit ce nombre décimal (ex: 255) en un nombre binaire sur 8 bits (ex: 11111111).</li>
+        <li><strong>Stockage :</strong> On enregistre la suite de bits dans la mémoire de l'appareil.</li>
+    </ol>
+
+    <h2>5. Les principes du codage RVB 24 bits</h2>
+    <p>C'est le standard utilisé pour la majorité de nos écrans et photos :</p>
+    <ul>
+        <li><strong>Le Bit :</strong> C'est l'unité élémentaire (0 ou 1).</li>
+        <li><strong>L'Octet :</strong> Un groupe de 8 bits. Chaque couleur primaire (R, V ou B) occupe 1 octet.</li>
+        <li><strong>Le Pixel :</strong> Codé sur 3 octets (3 x 8 = 24 bits).</li>
+        <li><strong>Capacité :</strong> 2 puissance 24 permet de coder exactement 16 777 216 couleurs différentes.</li>
+    </ul>
+
+    <h2>6	. Récapitulatif des valeurs binaires</h2>
+    <p>Quelques exemples de "traduction" pour comprendre le lien entre couleur et binaire :</p>
+    
+    <table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse;">
+        <thead>
+            <tr style="background-color: #283F3B;">
+                <th>Couleur</th>
+                <th>Valeur Décimale (RVB)</th>
+                <th>Codage Binaire (24 bits)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Noir</strong></td>
+                <td>(0, 0, 0)</td>
+                <td>00000000 00000000 00000000</td>
+            </tr>
+            <tr>
+                <td><strong>Blanc</strong></td>
+                <td>(255, 255, 255)</td>
+                <td>11111111 11111111 11111111</td>
+            </tr>
+            <tr>
+                <td><strong>Rouge Pur</strong></td>
+                <td>(255, 0, 0)</td>
+                <td>11111111 00000000 00000000</td>
+            </tr>
+            <tr>
+                <td><strong>Bleu Pur</strong></td>
+                <td>(0, 0, 255)</td>
+                <td>00000000 00000000 11111111</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
